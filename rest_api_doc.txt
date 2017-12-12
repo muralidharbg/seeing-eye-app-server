@@ -1,0 +1,16 @@
+curl -X POST \
+  http://localhost:8081/detect-object-json \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 0f50245f-90b4-370a-b783-1a151449b97d' \
+  -d '{
+	"image": "sdadasdasdasd",
+	"image_name": "qqqqqqqqqq"
+}'
+
+curl -X POST \
+  http://localhost:8081/detect-object \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'postman-token: f8236d9e-1810-8f19-3f8b-32151c925648' \
+  -F file=undefined
