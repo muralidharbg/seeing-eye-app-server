@@ -6,6 +6,7 @@ SeeingEyeAppServer application initial steps
 1. `cd darknet`
 1. `make` (will complie darknet without GPU access)
 1. For darkent to use GPU make ensure CUDA is installed and change `GPU=1` in Makefile (refer `https://pjreddie.com/darknet/install/#cuda`)
+1. download the weights from `https://pjreddie.com/media/files/yolo.weights`
 1. The project root directory should now look like:
 
 |-darknet
