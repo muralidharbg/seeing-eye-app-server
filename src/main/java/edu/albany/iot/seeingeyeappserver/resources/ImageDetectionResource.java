@@ -39,11 +39,15 @@ public class ImageDetectionResource {
 
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
-	public ImageDetectionResponse detectImage(@FormDataParam("file") InputStream image,
-			@FormDataParam("file") FormDataContentDisposition imageDetails,
-			@FormDataParam("file") FormDataBodyPart body) {
+	public ImageDetectionResponse detectImage(@FormDataParam("file") FormDataBodyPart body, @FormDataParam("file") InputStream image,
+			@FormDataParam("file") FormDataContentDisposition imageDetails) {
 		ImageDetectionResponse response = new ImageDetectionResponse();
-		if (body.getMediaType().toString().equals("image/png") || body.getMediaType().toString().equals("image/jpeg")) {
+		
+		if(body == null){
+			System.out.println("null");
+		}
+		System.out.println(body.getMediaType().toString());
+		if (body.getMediaType().toString().equals("image/png") || body.getMediaType().toString().equals("image/jpeg") || body.getMediaType().toString().equals("image/jpg")) {
 			// image recognition
 			// String targetDirectory = System.getProperty("user.dir");
 			java.nio.file.Path targetDirectory = Paths.get(System.getProperty("user.dir") + "/darknet");
