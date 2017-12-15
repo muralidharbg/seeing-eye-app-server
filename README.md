@@ -9,9 +9,13 @@ SeeingEyeAppServer application initial steps
 1. The project root directory should now look like:
 
 |-darknet
+
 |-src
+
 |-target
+
 |-seeingeyeappserver.yml
+
 |-pom.xml
 
 
